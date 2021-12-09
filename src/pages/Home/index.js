@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import ChangePage from '../../components/ChangePage'
 import CoinInfo from '../../components/CoinInfo'
 import './style.css'
 
@@ -6,11 +8,10 @@ export default function Home() {
   const [coinsList, setCoinsList] = useState([])
   const [allCoins, setAllCoins] = useState([])
   const [inputText, setInputText] = useState('')
-
-  console.log(allCoins)
+  const {page} = useParams()
 
   async function getCoinsList() {
-    const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=brl&order=market_cap_desc&per_page=10&page=1&sparkline=false'
+    const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=brl&order=market_cap_desc&per_page=15&page=${page || 1}&sparkline=false`
     const response = await fetch(url)
     const responseData = await response.json()
 
@@ -25,7 +26,7 @@ export default function Home() {
 
   useEffect(() => {
     getCoinsList()
-  }, [])
+  },[page])
 
   return (
     <main className="home">
@@ -52,6 +53,9 @@ export default function Home() {
             ))
           }
         </ul>
+      </section>
+      <section>
+        <ChangePage/>
       </section>
     </main>
   )
