@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ChangePage from '../../components/ChangePage'
 import CoinInfo from '../../components/CoinInfo'
+import Loading from '../../components/Loading'
 import './style.css'
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
   const [allCoins, setAllCoins] = useState([])
   const [inputText, setInputText] = useState('')
   const {page} = useParams()
+  const [isLoading, setIsLoading] = useState(true)
 
   async function getCoinsList() {
     const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=brl&order=market_cap_desc&per_page=15&page=${page || 1}&sparkline=false`
@@ -17,6 +19,7 @@ export default function Home() {
 
     setCoinsList(responseData)
     setAllCoins(responseData)
+    setIsLoading(false)
   }
 
   function filterCoinsList(text) {
@@ -43,19 +46,21 @@ export default function Home() {
       <section>
         <ul className="home__list">
           {
-            coinsList.map(coin => (
-              <CoinInfo
-              key={coin.id}
-              name={coin.name}
-              imgUrl={coin.image}
-              currentPrice={coin.current_price}
-              marketCap={coin.market_cap}/>
-            ))
+            isLoading ? <Loading/> : (
+              coinsList.map(coin => (
+                <CoinInfo
+                key={coin.id}
+                name={coin.name}
+                imgUrl={coin.image}
+                currentPrice={coin.current_price}
+                marketCap={coin.market_cap}/>
+              ))
+            )
           }
         </ul>
       </section>
       <section>
-        <ChangePage/>
+        <ChangePage setIsLoading={setIsLoading}/>
       </section>
     </main>
   )

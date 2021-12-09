@@ -1,0 +1,28 @@
+.Loading {
+  width: 90%;
+  max-width: 15rem;
+  height: 15rem;
+  margin: 0 auto;
+  border: 15px solid #09ce72;
+  border-radius: 50%;
+  border-top-color: transparent;
+  background-color: transparent;
+  animation-name: rotate;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+    border-color: #09ce72;
+    border-top-color: transparent;
+  }
+
+  to {
+    transform: rotate(360deg);
+    border-color: aqua;
+    border-top-color: transparent;
+  }
+}
