@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import CoinInfo from '../../components/CoinInfo'
 import './style.css'
 
 export default function Home() {
@@ -21,6 +22,20 @@ export default function Home() {
       <div className="home__search-container">
         <input type="text" placeholder="Bitcoin" className="home__input"></input>
       </div>
+      <section>
+        <ul className="home__list">
+          {
+            coinsList.map(coin => (
+              <CoinInfo
+              key={coin.id}
+              name={coin.name}
+              imgUrl={coin.image}
+              currentPrice={coin.current_price}
+              marketCap={coin.market_cap}/>
+            ))
+          }
+        </ul>
+      </section>
     </main>
   )
 }

@@ -1,0 +1,75 @@
+
+.CoinInfo {
+  position: relative;
+  background-color: #fff;
+  padding: 20px;
+  padding-bottom: 40px;
+  border-left: 10px solid #09ce72;
+  border-bottom: 10px solid #09ce72;
+  border-bottom-left-radius: 50px;
+  max-width: 750px;
+  margin: 1.5rem auto;
+}
+
+.CoinInfo__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.CoinInfo__container:nth-of-type(2) {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.CoinInfo__name {
+  font-size: 2.3rem;
+}
+
+.CoinInfo__figure {
+  width: 100%;
+  max-width: 50px;
+}
+
+.CoinInfo__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.CoinInfo__current-price {
+  font-size: 1.2rem;
+  color: rgb(49, 49, 49);
+  font-weight: bolder;
+  margin: 3px 0;
+}
+
+.CoinInfo__market-cap {
+  font-size: 1.2rem;
+  color: rgb(49, 49, 49);
+  font-weight: bolder;
+  margin: 3px 0;
+}
+
+.CoinInfo__more-information {
+  display: block;
+  max-width: 100px;
+  width: 100%;
+  padding: 10px;
+  background-color: hsl(152, 92%, 35%);
+  border: 0;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bolder;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 1.2rem;
+}
+
+
+@media screen and (min-width:800px) {
+  .CoinInfo__name {
+    font-size: 2.75rem;
+  }
+}

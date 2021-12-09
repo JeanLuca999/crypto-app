@@ -23,3 +23,7 @@
   font-size: 1.25rem;
   
 }
+
+.home__list {
+  list-style-type: none;
+}
