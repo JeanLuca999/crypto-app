@@ -13,7 +13,7 @@ export default function CoinInfo({name, imgUrl, currentPrice, marketCap}) {
         <p className="CoinInfo__current-price">Valor atual: {currentPrice}</p>
         <p className="CoinInfo__market-cap">Market Cap: {marketCap}</p>
       </div>
-        <button className="CoinInfo__more-information">ver mais...</button>
+        <button className="CoinInfo__more-information">ver mais</button>
     </li>
   )
 }
