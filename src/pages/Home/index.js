@@ -52,8 +52,18 @@ export default function Home() {
                 key={coin.id}
                 name={coin.name}
                 imgUrl={coin.image}
-                currentPrice={coin.current_price}
-                marketCap={coin.market_cap}/>
+                currentPrice={
+                  Intl.NumberFormat('pt-BR', {
+                    style: 'currency',
+                    currency: 'BRL'
+                  }).format(coin.current_price)
+                }
+                marketCap={
+                  Intl.NumberFormat('pt-BR', {
+                    style: 'currency',
+                    currency: 'BRL'
+                  }).format(coin.market_cap)
+                }/>
               ))
             )
           }
