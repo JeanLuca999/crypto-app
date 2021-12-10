@@ -9,9 +9,45 @@
   padding: 20px;
   border-left: solid 7px #09ce72;
   border-bottom: solid 7px #09ce72;
+  max-width: 500px;
+  width: 90%;
+}
+
+.CoinPage__figure {
+  max-width: 150px;
+  margin: 0 auto;
+}
+
+.CoinPage__coin-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .CoinPage__card-title {
   color: #09ce72;
   font-size: 3rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.CoinPage__price {
+  font-size: 1.25rem;
+  margin: 5px 0;
+}
+
+.CoinPage__market-cap {
+  font-size: 1.25rem;
+  word-wrap: break-word;
+  margin: 5px 0;
+}
+
+.CoinPage__percentage {
+  font-size: 1.25rem;
+  margin: 5px 0;
+}
+
+.CoinPage__rank {
+  font-size: 1.25rem;
+  margin: 5px 0;
 }
