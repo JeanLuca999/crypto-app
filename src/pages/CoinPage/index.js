@@ -10,6 +10,13 @@ export default function CoinPage() {
 
   const {id} = useParams()
 
+  function formatPrice(price) {
+    return Intl.NumberFormat('pt-BR', {
+      style: 'currency',
+      currency: 'BRL'
+    }).format(price)
+  }
+
   async function getSingleCoin() {
     const url = `https://api.coingecko.com/api/v3/coins/${id}`
     const response = await fetch(url)
@@ -36,8 +43,12 @@ export default function CoinPage() {
         </figure>
         <h1 className="CoinPage__card-title">{information.name}</h1>
 
-        <p className="CoinPage__price">{information.price}</p>
-        <p className="CoinPage__market-cap">{information.market_cap}</p>
+        <p className="CoinPage__price">
+          Valor atual: {formatPrice(information.market_data.current_price.brl)}
+        </p>
+        <p className="CoinPage__market-cap">
+          Market cap: {formatPrice(information.market_data.market_cap.brl)}
+        </p>
         <p className="CoinPage__percentage"><span className="CoinPage__percentage-change"></span></p>
         <p className="CoinPage__rank"><span className="CoinPage__rank-number"></span></p>
       </div>
