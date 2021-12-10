@@ -21,7 +21,15 @@
   max-width: 500px;
   padding: 10px;
   font-size: 1.25rem;
-  
+  border: 0;
+  outline: 0;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+  border-bottom: 10px solid #09ce72;
+}
+
+.home__input:focus {
+  border-bottom: 10px solid #586674;
 }
 
 .home__list {

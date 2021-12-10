@@ -71,7 +71,7 @@
 }
 
 .CoinInfo__more-information:hover, .CoinInfo__more-information:focus {
-  background-color: hsl(210, 14%, 40%);
+  background-color: #586674;
 }
 
 .CoinInfo__link {
