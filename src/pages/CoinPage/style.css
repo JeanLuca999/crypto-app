@@ -1,0 +1,17 @@
+.CoinPage {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.CoinPage__card {
+  background-color: #fff;
+  padding: 20px;
+  border-left: solid 7px #09ce72;
+  border-bottom: solid 7px #09ce72;
+}
+
+.CoinPage__card-title {
+  color: #09ce72;
+  font-size: 3rem;
+}

@@ -50,6 +50,7 @@ export default function Home() {
               coinsList.map(coin => (
                 <CoinInfo
                 key={coin.id}
+                id={coin.id}
                 name={coin.name}
                 imgUrl={coin.image}
                 currentPrice={
