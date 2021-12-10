@@ -55,6 +55,7 @@ export default function CoinPage() {
         <p className="CoinPage__rank">
           <strong>Coingecko Rank:</strong> <span className="CoinPage__rank-number">{information.coingecko_rank}</span>
         </p>
+        <p dangerouslySetInnerHTML={{__html: information.description.en}}></p>
       </div>
       )}
       

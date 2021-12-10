@@ -12,7 +12,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home/>}  />
         <Route path="/:page" element={<Home/>} />
-        <Route path="coins/:id" element={<CoinPage/>} />
+        <Route path="/coins/:id" element={<CoinPage/>} />
       </Routes>
     </BrowserRouter>
     </>

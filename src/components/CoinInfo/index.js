@@ -1,8 +1,10 @@
 import {Link} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 import './style.css'
 
 export default function CoinInfo({name, imgUrl, currentPrice, marketCap, id}) {
+  let navigate = useNavigate()
   return (
     <li className="CoinInfo">
       <div className="CoinInfo__container">
@@ -15,7 +17,7 @@ export default function CoinInfo({name, imgUrl, currentPrice, marketCap, id}) {
         <p className="CoinInfo__current-price">Valor atual: {currentPrice}</p>
         <p className="CoinInfo__market-cap">Market Cap: {marketCap}</p>
       </div>
-        <Link className="CoinInfo__link" to={`coins/${id}`}><button className="CoinInfo__more-information">ver mais</button></Link>
+        <button className="CoinInfo__more-information" onClick={()=>navigate(`/coins/${id}`)}>ver mais</button>
     </li>
   )
 }
