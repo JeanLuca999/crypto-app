@@ -1,15 +1,16 @@
 .CoinPage {
   display: grid;
   place-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 4rem 0;
 }
 
 .CoinPage__card {
   background-color: #fff;
-  padding: 20px;
+  padding: 2.5rem;
   border-left: solid 7px #09ce72;
   border-bottom: solid 7px #09ce72;
-  max-width: 600px;
+  max-width: 700px;
   width: 90%;
 }
 
@@ -29,25 +30,44 @@
   font-size: 3rem;
   text-align: center;
   margin: 1rem 0;
+  margin-bottom: 2rem;
 }
 
 .CoinPage__price {
   font-size: 1.25rem;
   margin: 5px 0;
+  text-align: center;
 }
 
 .CoinPage__market-cap {
   font-size: 1.25rem;
   word-wrap: break-word;
   margin: 5px 0;
+  text-align: center;
 }
 
 .CoinPage__percentage {
   font-size: 1.25rem;
   margin: 5px 0;
+  text-align: center;
 }
 
 .CoinPage__rank {
   font-size: 1.25rem;
   margin: 5px 0;
+  text-align: center;
+}
+
+.CoinPage__title-description {
+  font-size: 2.25rem;
+  color: #09ce72;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.CoinPage__description {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  padding: 0 1.2rem;
 }
