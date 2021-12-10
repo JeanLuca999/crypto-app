@@ -1,0 +1,21 @@
+
+.BackButton {
+  display: block;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 2rem 20px;
+  border-radius: 5px;
+  transition-timing-function: ease;
+  transition-duration: 0.4s;
+}
+
+.BackButton:hover, .BackButton:focus {
+  background-color: #6cf9b718;
+  transform: scale(1.1);
+}
+
+.BackButton__img {
+  width: 2.5rem;
+  height: 2.5rem;
+}

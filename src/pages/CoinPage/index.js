@@ -3,6 +3,7 @@ import { useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { useState } from "react/cjs/react.development"
 import Loading from "../../components/Loading"
+import BackButton from '../../components/BackButton'
 
 export default function CoinPage() {
   const [information, setInformation] = useState({})
@@ -59,6 +60,7 @@ export default function CoinPage() {
           information.description.en ? <><h2 className="CoinPage__title-description">Descrição (en)</h2>
           <p className="CoinPage__description" dangerouslySetInnerHTML={{__html: information.description.en}}></p></> : ''
         }
+        <BackButton />
       </div>
       )}
       
