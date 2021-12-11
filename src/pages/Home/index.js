@@ -27,6 +27,13 @@ export default function Home() {
     setCoinsList(filteredArray)
   }
 
+  function formatPrice(price) {
+    return Intl.NumberFormat('pt-BR', {
+      style: 'currency',
+      currency: 'BRL'
+    }).format(price)
+  }
+
   useEffect(() => {
     getCoinsList()
   },[page])
@@ -49,22 +56,13 @@ export default function Home() {
             isLoading ? <Loading/> : (
               coinsList.map(coin => (
                 <CoinInfo
-                key={coin.id}
-                id={coin.id}
-                name={coin.name}
-                imgUrl={coin.image}
-                currentPrice={
-                  Intl.NumberFormat('pt-BR', {
-                    style: 'currency',
-                    currency: 'BRL'
-                  }).format(coin.current_price)
-                }
-                marketCap={
-                  Intl.NumberFormat('pt-BR', {
-                    style: 'currency',
-                    currency: 'BRL'
-                  }).format(coin.market_cap)
-                }/>
+                  key={coin.id}
+                  id={coin.id}
+                  name={coin.name}
+                  imgUrl={coin.image}
+                  currentPrice={formatPrice(coin.current_price)}
+                  marketCap={formatPrice(coin.market_cap)}
+                />
               ))
             )
           }
