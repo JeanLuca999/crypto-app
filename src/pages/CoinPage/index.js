@@ -26,7 +26,14 @@ export default function CoinPage() {
     setIsLoading(false)
   }
 
-  console.log(information)
+  let percentageChange = null
+  if (!isLoading) {
+    percentageChange = (information.market_data.price_change_percentage_1h_in_currency.brl > 0) ?  <>
+      <strong>Mudança de preço em porcentagem:</strong> <span className="CoinPage__percentage-change">{(information.market_data.price_change_percentage_1h_in_currency.brl).toFixed(2)}%</span>
+    </> : <>
+      <strong>Mudança de preço em porcentagem:</strong> <span className="CoinPage__percentage-change CoinPage__percentage-change--lower">{(information.market_data.price_change_percentage_1h_in_currency.brl).toFixed(2)}%</span>
+    </>
+  }
 
   useEffect(() => {
     getSingleCoin()
@@ -51,7 +58,7 @@ export default function CoinPage() {
           <strong>Market cap:</strong> {formatPrice(information.market_data.market_cap.brl)}
         </p>
         <p className="CoinPage__percentage">
-          <strong>Mudança de preço em porcentagem:</strong> <span className="CoinPage__percentage-change">{(information.market_data.price_change_percentage_1h_in_currency.brl).toFixed(2)}%</span>
+          {percentageChange}
         </p>
         <p className="CoinPage__rank">
           <strong>Coingecko Rank:</strong> <span className="CoinPage__rank-number">{information.coingecko_rank}</span>

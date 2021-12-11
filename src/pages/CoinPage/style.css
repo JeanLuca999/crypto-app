@@ -53,6 +53,14 @@
   text-align: center;
 }
 
+.CoinPage__percentage-change {
+  color: #000000;
+}
+
+.CoinPage__percentage-change--lower {
+  color: red;
+}
+
 .CoinPage__rank {
   font-size: 1.25rem;
   margin: 5px 0;
