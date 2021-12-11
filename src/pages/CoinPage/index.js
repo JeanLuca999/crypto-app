@@ -64,7 +64,7 @@ export default function CoinPage() {
           <strong>Coingecko Rank:</strong> <span className="CoinPage__rank-number">{information.coingecko_rank}</span>
         </p>
         {
-          information.description.en ? <><h2 className="CoinPage__title-description">Descrição (en)</h2>
+          information.description.en ? <><h2 className="CoinPage__title-description">Descrição (en-US)</h2>
           <p className="CoinPage__description" dangerouslySetInnerHTML={{__html: information.description.en}}></p></> : ''
         }
         <BackButton />

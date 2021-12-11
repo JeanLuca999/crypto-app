@@ -54,7 +54,7 @@
 }
 
 .CoinPage__percentage-change {
-  color: #000000;
+  color: green;
 }
 
 .CoinPage__percentage-change--lower {
