@@ -29,9 +29,9 @@ export default function CoinPage() {
   let percentageChange = null
   if (!isLoading) {
     percentageChange = (information.market_data.price_change_percentage_1h_in_currency.brl > 0) ?  <>
-      <strong>Mudança de preço em porcentagem:</strong> <span className="CoinPage__percentage-change">{(information.market_data.price_change_percentage_1h_in_currency.brl).toFixed(2)}%</span>
+      <strong>Mudança de preço em porcentagem (1 hora atrás):</strong> <span className="CoinPage__percentage-change">{(information.market_data.price_change_percentage_1h_in_currency.brl).toFixed(2)}%</span>
     </> : <>
-      <strong>Mudança de preço em porcentagem:</strong> <span className="CoinPage__percentage-change CoinPage__percentage-change--lower">{(information.market_data.price_change_percentage_1h_in_currency.brl).toFixed(2)}%</span>
+      <strong>Mudança de preço em porcentagem (1 hora atrás):</strong> <span className="CoinPage__percentage-change CoinPage__percentage-change--lower">{(information.market_data.price_change_percentage_1h_in_currency.brl).toFixed(2)}%</span>
     </>
   }
 
