@@ -15,6 +15,11 @@ utilize o comando `npm start` para inicializar.
 
 ## 💻 Preview do Projeto
 
+## Listagem
 ![preview01](./public/preview01.PNG)
+
+## Pesquisa
 ![preview02](./public/preview02.PNG)
+
+## Página Individual
 ![preview03](./public/preview03.PNG)
